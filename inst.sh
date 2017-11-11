@@ -36,7 +36,7 @@ case "$x" in
 
 
     1)
-      echo "Instalando Aguarde…….”
+      echo "Instalando Aguarde……..”
       apt-get install update
       apt-get install dropbear -y
       apt-get install nano
