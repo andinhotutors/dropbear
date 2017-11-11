@@ -15,13 +15,15 @@ echo -e "2)\033[01;33m•>>>>> (REMOVER DROPBEAR)\033[0m"
 echo ""
 echo -e "3)\033[01;33m•>>>>> (ATUALIZAR SITEMA)\033[0m"
 echo ""
-echo -e "4)\033[01;33m•>>>>> (PARA SQUID)\033[0m"
+echo -e "4)\033[01;33m•>>>>> (PARA SQUID NO UBUNTU 14.04)\033[0m"
 echo""
-echo -e "5)\033[01;33m•>>>>> (LIMPA DADOS DEIXADOS)\033[0m"
+echo -e "5)\033[01;33m•>>>>> (PARA SQUID NO DEBIAM,UBUNTU 16)\033[0m"
 echo""
-echo -e "6)\033[01;33m•>>>>> (CORRIGIR ERROS)\033[0m"
+echo -e "6)\033[01;33m•>>>>> (REINICIAR DROPBEAR)\033[0m"
 echo""
-echo -e "7)\033[01;33m•>>>>> (SAIR DO SCRIPT)\033[0m"
+echo -e "7)\033[01;33m•>>>>> (CORRIGIR ERROS)\033[0m"
+echo""
+echo -e "8)\033[01;33m•>>>>> (SAIR DO SCRIPT)\033[0m"
 echo ""
 echo "================================================"
 
@@ -42,47 +44,61 @@ case "$x" in
       cd /root
       wget https://raw.githubusercontent.com/andinhotutors/dropbear/master/dropbear
       mv dropbear /etc/default
+      service dropbear start
       sleep 5
       
 echo "================================================"
 ;;
     2)
-      echo "Informe o nome do pacote para ser removido?"
+      echo "REMOVENDO DROPBEAR"
+      echo "DIGITE dropbear PARA REMOVER"
       read nome
       apt-get remove --purge $nome
+      apt-get remove dropbear
+      apt-get autoremove
       sleep 5
 echo "================================================"
 ;;
    3)
       echo "Atualizando sistema..."
       apt-get update
+      apt-get upgrade -y
       sleep 5
 echo "================================================"
 ;;
-    4)
-       echo "Iniciando o processo..."
-       apt-get -f install
-       sleep 5
+   4)
+      echo "PARANDO SQUID..."
+      service squid3 stop
+      service squid stop
+      sleep 5
 echo "================================================"
 ;;      
-     5)  
-       echo "Corrigindo erros..." 
-       apt-get autoremove
-       sleep 5
+   5)
+      echo "PARANDO SQUID..."
+      /etc/init.d/squid3 stop
+      /etc/init.d/squid3 stop
+      sleep 5
+echo "================================================"
+;;      
+   6)  
+      echo "REINICIANDO DROPBEAR..." 
+      service dropbear restart
+      /etc/init.d/dropbear restart
+      sleep 5
 echo "================================================"
 ;;
-    6) 
-    echo "Reparando..."
-    dpkg --configure -a
-    sleep 5
+   7) 
+      echo "Reparando..."
+      dpkg --configure -a
+      sleep 5
 
 echo "================================================"
  ;;     
-       7)
-         echo "saindo..."
-         sleep 5
-         clear;
-         exit;
+    8)
+      echo "saindo..."
+      sleep 5
+      clear;
+      exit;
 echo "================================================"
 ;;
 
@@ -93,3 +109,11 @@ done
 
 }
 menu
+
+
+
+
+
+
+
+     
