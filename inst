@@ -26,7 +26,8 @@ do
 clear
 echo "================================================"
 tput setaf 8 ; tput setab 5 ; tput bold ; printf '%30s%s%-15s\n' "DROPBEAR ANDERSONTLS" ; tput sgr0
-echo "CRIADOR POR ANDERSONTLS"
+echo -e "\033[01;34m•>>>>> (CRIADOR ANDERSONTLS) \033[01;34m"
+echo -e "\033[01;34m•>>>>> (@kroz44) \033[01;34m"
 echo""
 echo -e "1)\033[01;34m•>>>>> (INSTALAR DROPBEAR) \033[01;34m"
 echo""
