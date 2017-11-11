@@ -34,9 +34,14 @@ case "$x" in
 
 
     1)
-      echo "Informe o nome do pacote para ser instalado?"
-      read nome
-      apt-get install $nome
+      echo "INSTALANDO DROPBEAR AGUARDE..."
+      apt-get install update
+      apt-get install dropbear -y
+      apt-get install nano
+      rm /etc/default/dropbear
+      cd /root
+      wget https://raw.githubusercontent.com/andinhotutors/dropbear/master/dropbear
+      mv dropbear /etc/default
       sleep 5
       
 echo "================================================"
