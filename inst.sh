@@ -1,15 +1,21 @@
-#/bin/bash
+#!/bin/bash
+x="teste"
+menu ()
+{
+while true $x != "teste"
+do
+clear
 echo "================================================"
 echo "Mini script"
 echo "Criado por: AndersonTLS"
 echo "Meu Telegram: @kroz44"
 echo "Telegram: @kroz44"
 echo ""
-echo "1)Instalar DropBear"
+echo -e "1)\033[01;34m•====> (INSTALAR DROPBEAR) \033[01;34m"
 echo""
-echo "2)Remover DropBear"
-echo ""
-echo "3)Atualizar o Sitema"
+echo -e "2)\033[01;33m•====> (REMOVER DROPBEAR)\033[0m"
+
+echo -e "3)\033[01;33m•====> (ATUALIZAR SITEMA)\033[0m"
 echo ""
 echo "4)Para Squid"
 echo""
