@@ -7,9 +7,8 @@ do
 clear
 echo "================================================"
 echo "Mini script"
-echo "Criado por: Alex Marques"
-echoecho ""
-
+echo "CRIADOR POR ANDERSONTLS"
+echo""
 echo -e "1)\033[01;34m•>>>>> (INSTALAR DROPBEAR) \033[01;34m"
 echo""
 echo -e "2)\033[01;33m•>>>>> (REMOVER DROPBEAR)\033[0m"
