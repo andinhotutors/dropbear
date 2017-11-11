@@ -1,10 +1,4 @@
 #/bin/bash
-x="teste"
-menu ()
-{
-while true $x != "teste"
-do
-clear
 echo "================================================"
 echo "Mini script"
 echo "Criado por: AndersonTLS"
