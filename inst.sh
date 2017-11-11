@@ -7,7 +7,6 @@ do
 clear
 tput setaf 8 ; tput setab 5 ; tput bold ; printf '%30s%s%-15s\n' "DropBear @kroz44" ; tput sgr0
 echo "================================================"
-echo "================================================"
 echo "Mini script"
 echo "Criado por: AndersonTLS"
 echo "Meu Telegram: @kroz44"
