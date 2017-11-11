@@ -41,7 +41,9 @@ case "$x" in
       apt-get install dropbear -y
       apt-get install nano
       rm /etc/default/dropbear
-      wget link
+      cd /root
+      wget https://raw.githubusercontent.com/andinhotutors/dropbear/master/dropbear
+      mv dropbear /etc/default
       sleep 5
       
 echo "================================================"
