@@ -36,7 +36,7 @@ case "$x" in
 
 
     1)
-      echo "Instalando Aguarde……..”
+      echo "Instalando Aguarde...”
       apt-get install update
       apt-get install dropbear -y
       apt-get install nano
@@ -49,8 +49,8 @@ case "$x" in
 echo "================================================"
 ;;
     2)
-      echo "Aguarde Estamos Removendo…..”
-      echo "Digite dropbear Para Remover…..”
+      echo "Aguarde Estamos Removendo...”
+      echo "Digite dropbear Para Remover...”
       read nome
       apt-get remove --purge $nome
       sleep 5
