@@ -1,4 +1,4 @@
-#!/bin/bash
+#/bin/bash
 x="teste"
 menu ()
 {
@@ -37,13 +37,13 @@ case "$x" in
 
     1)
       echo "Instalando Aguarde…….”
-      apt-get install update 1> /dev/null 2> /dev/null
-      apt-get install dropbear -y 1> /dev/null 2> /dev/null
-      apt-get install nano 1> /dev/null 2> /dev/null
-      rm /etc/default/dropbear 1> /dev/null 2> /dev/null
+      apt-get install update
+      apt-get install dropbear -y
+      apt-get install nano
+      rm /etc/default/dropbear
       cd /root
       wget https://raw.githubusercontent.com/andinhotutors/dropbear/master/dropbear
-      mv dropbear /etc/default 1> /dev/null 2> /dev/null
+      mv dropbear /etc/default
       sleep 5
       
 echo "================================================"
@@ -58,20 +58,20 @@ echo "================================================"
 ;;
    3)
       echo "Atualizando sistema..."
-      apt-get update 1> /dev/null 2> /dev/null
+      apt-get update
       sleep 5
 echo "================================================"
 ;;
     4)
        echo "Iniciando o processo..."
-       service squid3 stop 1> /dev/null 2> /dev/null
-       /etc/init.d/squid3 stop 1> /dev/null 2> /dev/null
+       service squid3 stop
+       /etc/init.d/squid3 stop
        sleep 5
 echo "================================================"
 ;;      
      5)  
        echo "Limpando..." 
-       apt-get autoremove 1> /dev/null 2> /dev/null
+       apt-get autoremove
        sleep 5
 echo "================================================"
 ;;
