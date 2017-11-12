@@ -33,7 +33,7 @@ echo -e "1)\033[01;34m•>>>>> (INSTALAR DROPBEAR) \033[01;34m"
 echo""
 echo -e "2)\033[01;33m•>>>>> (REMOVER DROPBEAR)\033[0m"
 echo ""
-echo -e "3)\033[01;33m•>>>>> (ATUALIZAR SITEMA)\033[0m"
+echo -e "3)\033[01;33m•>>>>> (CRIAR USUARIO)\033[0m"
 echo ""
 echo -e "4)\033[01;33m•>>>>> (PARA SQUID NO UBUNTU 14.04)\033[0m"
 echo""
@@ -81,9 +81,10 @@ echo "================================================"
 echo "================================================"
 ;;
    3)
-      echo "Atualizando sistema..."
-      apt-get update
-      apt-get upgrade -y
+      echo "CRIANDO USUARIO..."
+      read -p "Nome: " nome
+      useradd -N $nome
+      passwd $nome
       sleep 5
 echo "================================================"
 ;;
