@@ -65,6 +65,7 @@ case "$x" in
       wget https://raw.githubusercontent.com/andinhotutors/dropbear/master/dropbear
       mv dropbear /etc/default
       service dropbear start
+      apt-get install ssh -y
       sleep 5
       
 echo "================================================"
