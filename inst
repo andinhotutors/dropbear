@@ -59,6 +59,7 @@ case "$x" in
     1)
       echo "INSTALANDO DROPBEAR AGUARDE..."
       echo -e "\033[01;34m•>>>>> (REMOVA A PORTA 443 DO SSH) \033[01;34m"
+      sleep 5
       apt-get install update
       apt-get install dropbear -y
       apt-get install nano
@@ -69,6 +70,7 @@ case "$x" in
       service dropbear start
       apt-get install ssh -y
       echo -e "\033[01;34m•>>>>> (PORT 80,443 NO SSH) \033[01;34m"
+      sleep 5
       sleep 5
       
 echo "================================================"
