@@ -71,7 +71,7 @@ case "$x" in
       apt-get install ssh -y
       echo -e "\033[01;34m•>>>>> (PORT 80,443 NO SSH) \033[01;34m"
       sleep 5
-      sleep 5
+      sleep 2
       
 echo "================================================"
 ;;
@@ -82,7 +82,7 @@ echo "================================================"
       apt-get remove --purge $nome -y
       apt-get remove dropbear -y
       apt-get autoremove
-      sleep 5
+      sleep 2
 echo "================================================"
 ;;
    3)
@@ -90,28 +90,28 @@ echo "================================================"
       read -p "Nome: " nome
       useradd -N $nome
       passwd $nome
-      sleep 5
+      sleep 2
 echo "================================================"
 ;;
    4)
       echo "PARANDO SQUID..."
       service squid3 stop
       service squid stop
-      sleep 5
+      sleep 2
 echo "================================================"
 ;;      
    5)
       echo "PARANDO SQUID..."
       /etc/init.d/squid3 stop
       /etc/init.d/squid3 stop
-      sleep 5
+      sleep 2
 echo "================================================"
 ;;      
    6)  
       echo "REINICIANDO DROPBEAR..." 
       service dropbear restart
       /etc/init.d/dropbear restart
-      sleep 5
+      sleep 2
 echo "================================================"
 ;;
    7) 
@@ -119,7 +119,7 @@ echo "================================================"
       sleep 5
       cd /root
       rm inst
-      sleep 5
+      sleep 2
 
 echo "================================================"
  ;;     
