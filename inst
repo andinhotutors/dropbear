@@ -115,18 +115,17 @@ echo "================================================"
 echo "================================================"
 ;;
    7) 
-      echo "REMIVENDO..."
+      echo "REMIVENDO SAIA DO SCRIPT QUANDO TERMINA..."
+      sleep 5
       cd /root
       rm inst
       sleep 5
-      clear:
-      exit:
 
 echo "================================================"
  ;;     
     8)
       echo "saindo..."
-      sleep 3
+      sleep 1
       clear;
       exit;
 echo "================================================"
