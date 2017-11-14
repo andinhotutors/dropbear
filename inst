@@ -42,7 +42,7 @@ echo -e "(5)\033[01;33m•>>>>> (PARA SQUID NO DEBIAM,UBUNTU 16)\033[0m"
 echo""
 echo -e "(6)\033[01;33m•>>>>> (REINICIAR DROPBEAR)\033[0m"
 echo""
-echo -e "(7)\033[01;33m•>>>>> (CORRIGIR ERROS DO SERVIDOR)\033[0m"
+echo -e "(7)\033[01;33m•>>>>> (REMOVE SCRIPT)\033[0m"
 echo""
 echo -e "(8)\033[01;33m•>>>>> (SAIR DO SCRIPT)\033[0m"
 echo ""
@@ -116,7 +116,8 @@ echo "================================================"
 ;;
    7) 
       echo "Reparando..."
-      dpkg --configure -a
+      cd /root
+      rm inst
       sleep 5
 
 echo "================================================"
