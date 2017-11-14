@@ -79,8 +79,8 @@ echo "================================================"
       echo "REMOVENDO DROPBEAR"
       echo "DIGITE dropbear PARA REMOVER"
       read nome
-      apt-get remove --purge $nome
-      apt-get remove dropbear
+      apt-get remove --purge $nome -y
+      apt-get remove dropbear -y
       apt-get autoremove
       sleep 5
 echo "================================================"
