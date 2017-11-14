@@ -115,7 +115,7 @@ echo "================================================"
 echo "================================================"
 ;;
    7) 
-      echo "REMIVENDO SAIA DO SCRIPT QUANDO TERMINA..."
+      echo "REMOVENDO SAIA DO SCRIPT QUANDO TERMINA..."
       sleep 5
       cd /root
       rm inst
